@@ -1,0 +1,40 @@
+EasyRouting
+===========
+
+Shortcuts of basic routes to your views and controllers.
+Advantages: DRY, less code.
+
+
+In admin articles controller you can insert link to edit:
+
+  <%= link_to "Edit", edit_admin_article_path(@article) %>
+
+With this plugin you can simple write:
+
+  <%= link_to "Edit", edit_url(@article) %>
+
+
+There are also two redirect methods to your controllers.
+More examples are below.
+
+
+Example
+=======
+
+Views:
+
+  <%= link_to "All articles", index_url %>
+  <%= link_to "New article", new_url %>
+  <%= link_to "Show article", show_url(@article) %>
+  <%= link_to "Edit article", edit_url(@article) %>
+  <%= link_to "Delete article", delete_url(@article) %>
+
+
+Controllers:
+
+  redirect_to_index
+  redirect_to_show(@article)
+
+
+Copyright (c) 2010 Stefan Huska, released under the MIT license
+
